@@ -21,6 +21,16 @@ WORKDIR /home/$USERNAME
 
 # Configure chain to testnet
 RUN echo '{"chain": "Mainnet"}' > /home/$USERNAME/visor.json
+# Copy override gossip config
+RUN echo '{\
+    "root_node_ips": [\
+        {"Ip": "20.188.6.225"},\
+        {"Ip": "91.134.71.237"}\
+    ],\
+    "try_new_peers": false,\
+    "chain": "Mainnet"\
+}' > /home/$USERNAME/override_gossip_config.json
+
 
 # Import GPG public key
 RUN curl -o /home/$USERNAME/pub_key.asc $PUB_KEY_URL \
