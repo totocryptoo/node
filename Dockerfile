@@ -21,15 +21,11 @@ WORKDIR /home/$USERNAME
 
 # Configure chain to testnet
 RUN echo '{"chain": "Mainnet"}' > /home/$USERNAME/visor.json
+
 # Copy override gossip config
-RUN echo '{\
-    "root_node_ips": [\
-        {"Ip": "199.254.199.12"},\
-        {"Ip": "148.251.76.7"}\
-    ],\
-    "try_new_peers": false,\
-    "chain": "Mainnet"\
-}' > /home/$USERNAME/override_gossip_config.json
+COPY override_gossip_config.json /home/$USERNAME/override_gossip_config.json
+RUN chown $USERNAME:$USERNAME /home/$USERNAME/override_gossip_config.json
+
 
 
 # Import GPG public key
