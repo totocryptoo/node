@@ -24,8 +24,8 @@ RUN echo '{"chain": "Mainnet"}' > /home/$USERNAME/visor.json
 # Copy override gossip config
 RUN echo '{\
     "root_node_ips": [\
-        {"Ip": "20.188.6.225"},\
-        {"Ip": "91.134.71.237"}\
+        {"Ip": "199.254.199.12"},\
+        {"Ip": "148.251.76.7"}\
     ],\
     "try_new_peers": false,\
     "chain": "Mainnet"\
