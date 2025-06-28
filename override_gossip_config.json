@@ -30,6 +30,6 @@
         {"Ip": "47.74.39.46"},
         {"Ip": "8.211.133.129"}
     ],
-    "try_new_peers": false,
+    "try_new_peers": true,
     "chain": "Mainnet"
 }
