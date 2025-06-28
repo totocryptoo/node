@@ -24,7 +24,6 @@ RUN echo '{"chain": "Mainnet"}' > /home/$USERNAME/visor.json
 
 # Copy override gossip config
 COPY override_gossip_config.json /home/$USERNAME/override_gossip_config.json
-RUN chown $USERNAME:$USERNAME /home/$USERNAME/override_gossip_config.json
 
 
 
